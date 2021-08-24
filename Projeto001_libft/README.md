@@ -11,7 +11,7 @@ O objetivo desse projeto foi montar uma biblioteca pessoal, reescrevendo os cód
 1. Estrutura
 
     A Estrutura do Makefile é baseada em 3 pontos:<br>
-    
+
        alvo: dependências
          instruções
 
@@ -24,7 +24,7 @@ O objetivo desse projeto foi montar uma biblioteca pessoal, reescrevendo os cód
 ## ft_atoi
 
 Protótipo | int	ft_atoi(char *str)
------------- | -------------
+:------------ | :-------------
 Descrição |A função ft_atoi converte uma string em um número inteiro (tipo int).
 
 
