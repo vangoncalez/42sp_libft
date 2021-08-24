@@ -9,8 +9,7 @@ O objetivo desse projeto foi montar uma biblioteca pessoal, reescrevendo os cód
 1. O que é e para que serve?
 
     Um makefile é um arquivo especial, contendo comandos shell que informam ao sistema o que você deseja executar. Na maioria das vezes são comandos para compilar, recompilar, criar ou apagar arquivos, automatizando algumas tarefas. O arquivo Makefile não possui extensão, devendo ser nomeado apenas como *Makefile*. O arquivo é lido por um utilitário chamado Make.
-<br>
-<br>
+
 1. Estrutura
 
     A Estrutura do Makefile é baseada em 3 pontos:<br>
@@ -23,8 +22,7 @@ O objetivo desse projeto foi montar uma biblioteca pessoal, reescrevendo os cód
     * Pré-requisitos: geralmente são os alvos que devem ser executados antes da execução do alvo em questão.
 
     * Instruções: lista de instruções, regras ou comandos que o sistema deve executar (sempre identado com um *\<tab\>*).
-<br>
-<br>
+
 1. Como o make lê o arquivo Makefile
 
     Por padrão, o utilitário make inicia no primeiro alvo (desconsiderando os alvos iniciados por '.').
@@ -32,8 +30,7 @@ O objetivo desse projeto foi montar uma biblioteca pessoal, reescrevendo os cód
     do arquivo do alvo com os horários de modificação dos arquivos de dependência (pré-requisitos).
     <br>Qualquer arquivo de dependência que
     tem um horário de modificação mais recente que o arquivo do alvo, o forçará a ser recriado.
-<br>
-<br>
+
 1. Alvos padrões:
 
     Existem vários alvos padrões descritos no manual. Vou citar dois deles aqui:
@@ -41,10 +38,8 @@ O objetivo desse projeto foi montar uma biblioteca pessoal, reescrevendo os cód
     * *all*: geralmente o destino padrão, onde colocamos instruções para executar todo o programa.
     * *clean*: é o destino onde colocamos instruções para apagar todos os arquivos criados na compilação. No caso do projeto Libft da 42, coloquei para apagar todos os arquivos '.o' criados pelo sistema, mas não o arquivo '.a' gerado.
     Caso seja necessário acessar um alvo específico, basta digitar: make nome_do_alvo.
-<br>
     Mais informações sobre alvos padrões no [Manual da GNU](https://www.gnu.org/software/make/manual/html_node/Standard-Targets.html#Standard-Targets):
-<br>
-<br>
+
 1. Variáveis:
 
     As variáveis podem ser definidas através do '=', conforme o exemplo:
@@ -54,9 +49,6 @@ O objetivo desse projeto foi montar uma biblioteca pessoal, reescrevendo os cód
     Para acessá-la, podemos utilizar:
 
         ${NOME_DA_VARIAVEL}
-
-<br>
-<br>
 
 ## Explicação detalhada do Makefile da Libft
 Defini uma variável chamada NAME, cujo valor é nome do arquivo compilado da biblioteca:
