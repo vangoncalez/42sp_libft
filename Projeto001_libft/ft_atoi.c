@@ -6,14 +6,11 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:23:11 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/23 17:00:00 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/08/24 09:34:53 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_atoi_neg(char *str, int num);
-int	ft_atoi_control(int control1);
 
 int	ft_atoi(char *str)
 {
