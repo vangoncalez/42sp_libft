@@ -6,13 +6,12 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:24:34 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/23 23:11:35 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/08/24 14:03:54 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int	ft_strtrim_start(char const *s1, char const *set)
 {
