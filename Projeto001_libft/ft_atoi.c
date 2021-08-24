@@ -12,9 +12,6 @@
 
 #include "libft.h"
 
-int	ft_atoi_neg(char *str, int num);
-int	ft_atoi_control(int control1);
-
 int	ft_atoi(char *str)
 {
 	int	neg;
