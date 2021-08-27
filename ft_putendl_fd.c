@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 14:23:58 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/23 23:32:49 by vaferrei         ###   ########.fr       */
+/*   Created: 2021/08/19 14:23:53 by vaferrei          #+#    #+#             */
+/*   Updated: 2021/08/25 21:49:04 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//em desenvolvimento
-// void ft_putstr_fd(char *s, int fd)
-// {
-
-// }
+void	ft_putendl_fd(char *s, int fd)
+{
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+}

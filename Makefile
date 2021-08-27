@@ -6,7 +6,7 @@
 #    By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/19 14:13:56 by vaferrei          #+#    #+#              #
-#    Updated: 2021/08/23 09:41:00 by vaferrei         ###   ########.fr        #
+#    Updated: 2021/08/27 17:10:07 by vaferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS	=	ft_atoi.c \
 			ft_putchar_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
+			ft_putstr_fd.c \
 			ft_split.c \
 			ft_strchr.c \
 			ft_strdup.c \
@@ -45,6 +46,15 @@ SRCS	=	ft_atoi.c \
 			ft_substr.c \
 			ft_tolower.c \
 			ft_toupper.c \
+			ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c
 
 
 OBJS	= ${SRCS:.c=.o}
@@ -61,6 +71,9 @@ ${NAME}:	${OBJS}
 
 all:		${NAME}
 
+# so:     $(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+# 		gcc -nostartfiles -shared -o libft.so $(OBJS)
+
 clean:
 	rm -f ${OBJS}
 
@@ -70,7 +83,7 @@ fclean: clean
 re: fclean all
 
 test: all
-	${CC} ../main/main.c  -L. -lft -o ../main/teste
-	./../main/teste
+	${CC} ../../main/main.c  -L. -lft -o ../../main/teste
+	./../../main/teste
 
 .PHONY: all, clean, fclean, re

@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 14:23:45 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/23 17:59:52 by vaferrei         ###   ########.fr       */
+/*   Created: 2021/08/26 17:33:47 by vaferrei          #+#    #+#             */
+/*   Updated: 2021/08/26 20:55:02 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	char	*cdest;
-	char	*csrc;
-	size_t	i;
+	int	index;
 
-	cdest = (char *)dest;
-	csrc = (char *)src;
-	i = 0;
-	if (cdest > csrc)
-		while (n-- > 0)
-			cdest[n] = csrc[n];
-	else
+	if (lst && new)
 	{
-		while (i < n)
-		{
-			cdest[i] = csrc[i];
-			i++;
-		}
+		new->next = *lst;
+		index = ft_lstsize(*lst);
+		*lst = new + index;
 	}
-	return (dest);
 }
