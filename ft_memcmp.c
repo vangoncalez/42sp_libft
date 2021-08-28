@@ -6,7 +6,7 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:23:40 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/23 17:38:44 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/08/28 17:21:22 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	s3 = (const unsigned char *)str1;
 	s4 = (const unsigned char *)str2;
 	i = 0;
-	while (i < n && s3[i] && s4[i])
+	if (n == 0)
+		return (0);
+	while (i < n)
 	{
 		if (s3[i] != s4[i])
 			return (s3[i] - s4[i]);
