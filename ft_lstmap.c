@@ -6,7 +6,7 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 17:34:02 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/28 18:45:49 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/08/28 22:45:49 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 #include "libft.h"
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*newlst;
+	t_list	*new;
 	t_list	*temp;
 
-	newlst = NULL;
+	new = NULL;
 	if (lst == NULL)
 		return (NULL);
 	while (lst != NULL)
@@ -27,7 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (temp == NULL)
 			ft_lstclear(&temp, del);
 		lst = lst -> next;
-		ft_lstadd_back(&newlst, temp);
+		ft_lstadd_back(&new, temp);
 	}
-	return (newlst);
+	return (new);
 }
