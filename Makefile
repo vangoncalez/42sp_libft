@@ -6,7 +6,7 @@
 #    By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/19 14:13:56 by vaferrei          #+#    #+#              #
-#    Updated: 2021/08/27 17:10:07 by vaferrei         ###   ########.fr        #
+#    Updated: 2021/08/28 22:42:37 by vaferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,9 +71,6 @@ ${NAME}:	${OBJS}
 
 all:		${NAME}
 
-# so:     $(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-# 		gcc -nostartfiles -shared -o libft.so $(OBJS)
-
 clean:
 	rm -f ${OBJS}
 
@@ -83,7 +80,8 @@ fclean: clean
 re: fclean all
 
 test: all
-	${CC} ../../main/main.c  -L. -lft -o ../../main/teste
-	./../../main/teste
+	${CC} ../libft-main/main.c  -L. -lft -o ../libft-main/teste
+	./../libft-main/teste
+
 
 .PHONY: all, clean, fclean, re

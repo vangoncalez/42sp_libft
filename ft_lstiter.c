@@ -6,20 +6,19 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 17:33:57 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/26 21:17:37 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/08/28 18:36:57 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if(f && lst)
+	if (!f)
+		return ;
+	while (lst)
 	{
-		while (lst)
-		{
-			f(lst);
-			lst = lst->next;
-		}
+		f(lst->content);
+		lst = lst->next;
 	}
 }

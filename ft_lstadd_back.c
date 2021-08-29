@@ -6,20 +6,21 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 17:33:47 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/26 20:55:02 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/08/28 18:34:12 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	index;
+	t_list	*last;
 
-	if (lst && new)
+	if (!*lst)
 	{
-		new->next = *lst;
-		index = ft_lstsize(*lst);
-		*lst = new + index;
+		*lst = new;
+		return ;
 	}
+	last = ft_lstlast(*lst);
+	last->next = new;
 }

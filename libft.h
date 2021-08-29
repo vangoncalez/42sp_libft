@@ -6,7 +6,7 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 15:43:20 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/26 17:36:41 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/08/28 17:34:12 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-int		ft_atoi(char *str);
+int		ft_atoi(const char *str);
 void	ft_bzero(void *str, size_t n );
 void	*ft_calloc(size_t num, size_t size);
 int		ft_isalnum(int c);
