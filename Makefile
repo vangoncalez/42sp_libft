@@ -6,7 +6,7 @@
 #    By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/19 14:13:56 by vaferrei          #+#    #+#              #
-#    Updated: 2021/08/28 22:42:37 by vaferrei         ###   ########.fr        #
+#    Updated: 2021/09/02 09:12:29 by vaferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,18 +46,20 @@ SRCS	=	ft_atoi.c \
 			ft_substr.c \
 			ft_tolower.c \
 			ft_toupper.c \
-			ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c \
+
+BSRCS 	= 	ft_lstnew.c\
+       		ft_lstadd_front.c\
+       		ft_lstsize.c\
+       		ft_lstlast.c\
+       		ft_lstadd_back.c\
+       		ft_lstdelone.c\
+			ft_lstclear.c\
+			ft_lstiter.c\
 			ft_lstmap.c
 
-
 OBJS	= ${SRCS:.c=.o}
+
+BOBJS	= ${BSRCS:.c=.o}
 
 CC		= clang
 
@@ -78,6 +80,9 @@ fclean: clean
 	rm -f ${NAME}
 
 re: fclean all
+
+bonus: 	${BOBJS}
+	ar -rcs $(NAME) ${BOBJS}
 
 test: all
 	${CC} ../libft-main/main.c  -L. -lft -o ../libft-main/teste
