@@ -6,7 +6,7 @@
 #    By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/19 14:13:56 by vaferrei          #+#    #+#              #
-#    Updated: 2021/09/02 09:12:29 by vaferrei         ###   ########.fr        #
+#    Updated: 2021/09/02 18:10:16 by vaferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ all:		${NAME}
 
 clean:
 	rm -f ${OBJS}
+	rm -f ${BOBJS}
 
 fclean: clean
 	rm -f ${NAME}
@@ -84,9 +85,9 @@ re: fclean all
 bonus: 	${BOBJS}
 	ar -rcs $(NAME) ${BOBJS}
 
-test: all
+test: all bonus
 	${CC} ../libft-main/main.c  -L. -lft -o ../libft-main/teste
 	./../libft-main/teste
 
 
-.PHONY: all, clean, fclean, re
+.PHONY: all, bonus, clean, fclean, re
