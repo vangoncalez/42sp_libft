@@ -6,17 +6,13 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 15:43:20 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/09/07 13:19:00 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/09/08 12:45:35 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# include <stdio.h>
 # include <stdlib.h>
-# include <stddef.h>
-# include <string.h>
 # include <unistd.h>
 
 typedef struct s_list
