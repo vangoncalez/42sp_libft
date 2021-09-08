@@ -6,7 +6,7 @@
 #    By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/19 14:13:56 by vaferrei          #+#    #+#              #
-#    Updated: 2021/09/02 18:10:16 by vaferrei         ###   ########.fr        #
+#    Updated: 2021/09/07 15:50:17 by vaferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,10 +84,5 @@ re: fclean all
 
 bonus: 	${BOBJS}
 	ar -rcs $(NAME) ${BOBJS}
-
-test: all bonus
-	${CC} ../libft-main/main.c  -L. -lft -o ../libft-main/teste
-	./../libft-main/teste
-
 
 .PHONY: all, bonus, clean, fclean, re

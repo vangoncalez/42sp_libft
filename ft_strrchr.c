@@ -6,7 +6,7 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:24:31 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/23 16:13:15 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:58:19 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int	i;
+	char	*cstr;
+	int		len;
+	char	cc;
 
-	i = 0;
-	while (str[i])
-		i++;
-	if (c == '\0')
-		return ((char *)str + i);
-	while (i >= 0)
+	cstr = (char *)str;
+	cc = (char)c;
+	len = ft_strlen(cstr);
+	if (cc == '\0')
+		return ((char *)cstr + len);
+	while (len >= 0)
 	{
-		if (str[i] == c)
-			return ((char *)str + i);
-		i--;
+		if (cstr[len] == cc)
+			return ((char *)cstr + len);
+		len--;
 	}
 	return (NULL);
 }

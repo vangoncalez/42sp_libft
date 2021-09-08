@@ -6,7 +6,7 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:24:01 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/08/28 22:37:25 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/09/07 15:41:53 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,9 @@ char	**ft_tosplit(char const *s, char **split, char c)
 		if (s[i] != c && control == 0)
 		{
 			len = ft_wordsize(s + i, c);
-			split[j] = (char *) malloc (sizeof(char) * (len + 1));
+			split[j] = (char *) ft_calloc (sizeof(char), (len + 1));
 			if (split[j] != NULL)
-				split[j] = ft_substr(s, i, len);
+				ft_strlcpy (split[j], s + i, len + 1);
 			control = 1;
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: vaferrei <vaferrei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:24:34 by vaferrei          #+#    #+#             */
-/*   Updated: 2021/09/03 19:26:41 by vaferrei         ###   ########.fr       */
+/*   Updated: 2021/09/07 14:28:54 by vaferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(s1));
 	start = ft_strtrim_start(s1, set);
 	end = 1 + ft_strtrim_end(s1, set);
-	if (end < start)
-	{
-		end = 0;
-		start = -1;
-	}
+	if (end <= start)
+		return ((ft_strdup("")));
 	str = (char *)malloc (sizeof(char) * (end - start + 1));
 	if (!str)
 		return (NULL);
